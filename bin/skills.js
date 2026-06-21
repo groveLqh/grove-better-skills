@@ -10,13 +10,15 @@ function usage() {
   console.log(`Install Codex/Cloud-compatible skills from a repository.
 
 Usage:
-  skills add <owner/repo|git-url|local-path> [skill-name] [--force] [--dir <skills-dir>]
+  skills add [skill-name] [--force] [--dir <skills-dir>]
+  skills add --repo <owner/repo|git-url|local-path> [skill-name] [--force] [--dir <skills-dir>]
 
 Examples:
-  npx skills add jimliu/baoyu-skills
-  npx skills add jimliu/baoyu-skills risk-oriented-code-review
-  npx skills add https://github.com/jimliu/baoyu-skills.git --force
-  npx skills add ./baoyu-skills --dir ~/.codex/skills
+  npx skills add
+  npx skills add risk-oriented-code-review
+  npx skills add --force
+  npx skills add --dir ~/.codex/skills
+  npx skills add --repo jimliu/baoyu-skills risk-oriented-code-review
 
 Destination priority:
   1. --dir <skills-dir>
@@ -62,12 +64,17 @@ function parseArgs(argv) {
       options.dir = arg.slice('--dir='.length);
       continue;
     }
+    if (arg === '--repo') {
+      options.repo = args.shift();
+      if (!options.repo) fail('--repo requires a value');
+      continue;
+    }
+    if (arg.startsWith('--repo=')) {
+      options.repo = arg.slice('--repo='.length);
+      continue;
+    }
     if (arg.startsWith('--')) {
       fail(`unknown option: ${arg}`);
-    }
-    if (!options.repo) {
-      options.repo = arg;
-      continue;
     }
     if (!options.skillName) {
       options.skillName = arg;
@@ -76,7 +83,6 @@ function parseArgs(argv) {
     fail('only one optional skill name can be provided');
   }
 
-  if (!options.repo) fail('missing repository. Example: skills add jimliu/baoyu-skills');
   if (options.skillName && (options.skillName.includes('/') || options.skillName.includes('..'))) {
     fail(`invalid skill name: ${options.skillName}`);
   }
@@ -106,8 +112,10 @@ function repoToGitUrl(repo) {
 }
 
 function prepareRepo(repo) {
+  if (!repo) return { repoRoot: path.resolve(__dirname, '..'), label: 'bundled skills', cleanup: () => {} };
+
   const localPath = expandHome(repo);
-  if (fs.existsSync(localPath)) return { repoRoot: path.resolve(localPath), cleanup: () => {} };
+  if (fs.existsSync(localPath)) return { repoRoot: path.resolve(localPath), label: repo, cleanup: () => {} };
 
   const gitUrl = repoToGitUrl(repo);
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'skills-repo-'));
@@ -116,7 +124,7 @@ function prepareRepo(repo) {
     fs.rmSync(tempDir, { recursive: true, force: true });
     fail(`failed to clone repository: ${repo}`);
   }
-  return { repoRoot: tempDir, cleanup: () => fs.rmSync(tempDir, { recursive: true, force: true }) };
+  return { repoRoot: tempDir, label: repo, cleanup: () => fs.rmSync(tempDir, { recursive: true, force: true }) };
 }
 
 function readJson(filePath) {
@@ -168,7 +176,7 @@ function installSkill(skill, destRoot, force) {
 
 function main() {
   const options = parseArgs(process.argv.slice(2));
-  const { repoRoot, cleanup } = prepareRepo(options.repo);
+  const { repoRoot, label, cleanup } = prepareRepo(options.repo);
 
   try {
     const availableSkills = discoverSkills(repoRoot);
@@ -184,7 +192,7 @@ function main() {
     const destRoot = destinationRoot(options);
     const installed = selectedSkills.map((skill) => ({ name: skill.name, destDir: installSkill(skill, destRoot, options.force) }));
 
-    console.log(`Installed ${installed.length} skill${installed.length === 1 ? '' : 's'} from ${options.repo}:`);
+    console.log(`Installed ${installed.length} skill${installed.length === 1 ? '' : 's'} from ${label}:`);
     for (const skill of installed) {
       console.log(`  - ${skill.name} -> ${skill.destDir}`);
     }
