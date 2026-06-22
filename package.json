@@ -17,6 +17,9 @@
     "install.sh",
     "skills",
     "skills.json",
-    "README.md"
+    "README.md",
+    ".codex",
+    "third-party-skills",
+    "third-party-skills.json"
   ]
 }
