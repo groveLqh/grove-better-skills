@@ -7,7 +7,25 @@
       "path": "skills/risk-oriented-code-review",
       "entry": "skills/risk-oriented-code-review/SKILL.md",
       "version": "0.1.0",
-      "tags": ["code-review", "risk-analysis", "codex"],
+      "tags": [
+        "code-review",
+        "risk-analysis",
+        "codex"
+      ],
+      "installable": true
+    },
+    {
+      "name": "skill-recommender",
+      "description": "Recommend the best-matching Skill from this repository's first-party Skills and recorded third-party Skills based on the user's current scenario. Designed for use with /recommend.",
+      "path": "skills/skill-recommender",
+      "entry": "skills/skill-recommender/SKILL.md",
+      "version": "0.1.0",
+      "tags": [
+        "recommendation",
+        "skill-selection",
+        "slash-command",
+        "codex"
+      ],
       "installable": true
     }
   ]
