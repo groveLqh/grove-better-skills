@@ -165,6 +165,12 @@ curl -fsSL <raw-install-url> | SKILLS_REPO_URL=<git-repo-url> bash -s -- skill-r
 6. 安装方式（如果已确认）
 7. 是否可安装：`installable: true/false`
 
+## 第三方 Skills 列表
+
+| Skill | 来源 | 适用场景 | 安装方式 | 详情 |
+| --- | --- | --- | --- | --- |
+| `native-feel-cross-platform-desktop` | [`yetone/native-feel-skill`](https://github.com/yetone/native-feel-skill) | 跨平台桌面应用、系统 WebView、原生体验、typed IPC、Raycast 风格架构和发布前体验审计 | `npx skills add yetone/native-feel-skill -g` | [`third-party-skills/native-feel-cross-platform-desktop.md`](third-party-skills/native-feel-cross-platform-desktop.md) |
+
 ## 机器可读索引
 
 ### `skills.json`
