@@ -71,6 +71,31 @@
       "relationshipToFirstPartySkills": "Complements skill-recommender as a third-party candidate for authorized security and reverse-engineering workflows; it is broader and more toolchain-oriented than risk-oriented-code-review.",
       "installable": true,
       "installCommand": "git clone https://github.com/zhaoxuya520/reverse-skill.git"
+    },
+    {
+      "name": "ppt-master",
+      "description": "AI-driven presentation workflow that converts source documents, URLs, Markdown, existing PPTX decks, or topic briefs into real editable PowerPoint files through SVG generation, quality checks, post-processing, templates, notes, narration, and PPTX export.",
+      "repository": "https://github.com/hugohe3/ppt-master",
+      "record": "third-party-skills/ppt-master.md",
+      "entry": "skills/ppt-master/SKILL.md",
+      "tags": [
+        "presentation",
+        "pptx",
+        "powerpoint",
+        "document-conversion",
+        "svg-generation",
+        "template-fill",
+        "deck-beautify",
+        "speaker-notes"
+      ],
+      "recommendedFor": [
+        "Creating a real editable PowerPoint deck from PDF, DOCX, URL, Markdown, text, or a topic brief",
+        "Reusing or filling an existing PPTX template while keeping native PowerPoint editability",
+        "Beautifying an existing deck, generating speaker notes or narration, and exporting native PPTX rather than slide images"
+      ],
+      "relationshipToFirstPartySkills": "Complements skill-recommender as a third-party candidate for PPT generation and deck workflows; it is a specialized artifact-generation workflow rather than a code review skill.",
+      "installable": true,
+      "installCommand": "git clone https://github.com/hugohe3/ppt-master.git"
     }
   ]
 }
