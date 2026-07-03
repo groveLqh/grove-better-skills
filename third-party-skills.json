@@ -96,6 +96,33 @@
       "relationshipToFirstPartySkills": "Complements skill-recommender as a third-party candidate for PPT generation and deck workflows; it is a specialized artifact-generation workflow rather than a code review skill.",
       "installable": true,
       "installCommand": "git clone https://github.com/hugohe3/ppt-master.git"
+    },
+    {
+      "name": "uzi-skill",
+      "description": "Stock deep-analysis workflow for A-share, Hong Kong, and US equities, covering deep research, quick scans, DCF/Comps/LBO-style valuation, investor-panel review, LHB/hot-money analysis, trap detection, IC memos, and Bloomberg-style HTML reports.",
+      "repository": "https://github.com/wbh604/UZI-Skill",
+      "record": "third-party-skills/uzi-skill.md",
+      "entry": "SKILL.md",
+      "tags": [
+        "finance",
+        "stocks",
+        "a-share",
+        "hong-kong",
+        "us-stocks",
+        "valuation",
+        "dcf",
+        "investor-panel",
+        "lhb",
+        "trap-detection"
+      ],
+      "recommendedFor": [
+        "Running structured stock deep research across data fetching, valuation, investor review, qualitative judgment, and report generation",
+        "Checking A-share LHB/hot-money signals, investor-style disagreement, and whether a stock recommendation has pump-and-dump or trap characteristics",
+        "Generating IC memos, quick scans, DCF-focused views, and Bloomberg-style HTML research reports with explicit evidence and caveats"
+      ],
+      "relationshipToFirstPartySkills": "Complements skill-recommender as a third-party candidate for stock research and investment-analysis workflows; it is unrelated to risk-oriented-code-review except as an example of staged gates and review loops.",
+      "installable": true,
+      "installCommand": "git clone https://github.com/wbh604/UZI-Skill.git"
     }
   ]
 }
