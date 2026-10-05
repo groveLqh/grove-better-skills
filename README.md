@@ -218,6 +218,7 @@ Use $debugging-webpage-anomalies to diagnose why this webpage hits OOM or maxes 
 | `reverse-skill` | [`zhaoxuya520/reverse-skill`](https://github.com/zhaoxuya520/reverse-skill) | 授权逆向、安全研究、CTF、APK/二进制/JS 分析、工具链路由和报告生成 | `git clone https://github.com/zhaoxuya520/reverse-skill.git` | [`third-party-skills/reverse-skill.md`](third-party-skills/reverse-skill.md) |
 | `ppt-master` | [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) | 从文档、网页、Markdown、已有 PPTX 或主题生成真实可编辑 PowerPoint，支持模板填充、美化、speaker notes 和导出 | `git clone https://github.com/hugohe3/ppt-master.git` | [`third-party-skills/ppt-master.md`](third-party-skills/ppt-master.md) |
 | `uzi-skill` | [`wbh604/UZI-Skill`](https://github.com/wbh604/UZI-Skill) | A 股/港股/美股个股深度分析、估值建模、投资者评审团、龙虎榜/游资分析和杀猪盘检测 | `git clone https://github.com/wbh604/UZI-Skill.git` | [`third-party-skills/uzi-skill.md`](third-party-skills/uzi-skill.md) |
+| `answer-me-with-html` | [`QingYunA/answer-me-with-html`](https://github.com/QingYunA/answer-me-with-html) | 将 Markdown 回答渲染成离线 HTML 图解，适合技术解释、架构梳理、方案对比与按需讲解视频 | `npx skills add QingYunA/answer-me-with-html` | [`third-party-skills/answer-me-with-html.md`](third-party-skills/answer-me-with-html.md) |
 
 ## 机器可读索引
 
@@ -253,5 +254,6 @@ Use $debugging-webpage-anomalies to diagnose why this webpage hits OOM or maxes 
 - 已建立第三方 Skills 机器可读索引：`third-party-skills.json`
 - 已记录第三方 Skill：`native-feel-cross-platform-desktop`
 - 已记录第三方 Skill：`uzi-skill`
+- 已记录第三方 Skill：`answer-me-with-html`
 - 已支持通过 `npx skills@latest add grove94/grove-better-skills` 从 GitHub 一键安装自研 Skills
 - 已支持通过 `install.sh` 从本地仓库一键安装指定自研 Skill

@@ -123,6 +123,31 @@
       "relationshipToFirstPartySkills": "Complements skill-recommender as a third-party candidate for stock research and investment-analysis workflows; it is unrelated to risk-oriented-code-review except as an example of staged gates and review loops.",
       "installable": true,
       "installCommand": "git clone https://github.com/wbh604/UZI-Skill.git"
+    },
+    {
+      "name": "answer-me-with-html",
+      "description": "Turns concise Markdown drafts into self-contained HTML explanations with automatically laid-out diagrams, comparisons, timelines, themes, and optional narrated explainer videos through a bundled CLI.",
+      "repository": "https://github.com/QingYunA/answer-me-with-html",
+      "record": "third-party-skills/answer-me-with-html.md",
+      "entry": "skills/answer-me-with-html/SKILL.md",
+      "tags": [
+        "html",
+        "visual-explanation",
+        "markdown",
+        "diagrams",
+        "architecture",
+        "comparison",
+        "offline",
+        "explainer-video"
+      ],
+      "recommendedFor": [
+        "Explaining technical concepts, protocols, architecture, and multi-step workflows with diagrams",
+        "Turning multi-way comparisons, timelines, and structured summaries into readable offline HTML pages",
+        "Creating an explainer video when explicitly requested"
+      ],
+      "relationshipToFirstPartySkills": "Complements skill-recommender as a third-party candidate for visual explanations and HTML deliverables; pairs with debugging or review findings to present conclusions, while clone-website focuses on reproducing an existing website.",
+      "installable": true,
+      "installCommand": "npx skills add QingYunA/answer-me-with-html"
     }
   ]
 }
