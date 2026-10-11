@@ -113,6 +113,16 @@ curl -fsSL <raw-install-url> | SKILLS_REPO_URL=<git-repo-url> bash -s -- skill-r
 
 ## 自研 Skills
 
+### 盒马领取盒花
+
+路径：[`skills/hema-collect-flowers`](skills/hema-collect-flowers)
+
+依赖 iphone-use，在盒马「我的 → 盒马小镇 → 攒盒花」完成每日签到、每日答题并收取对应奖励。默认只做这两项，不做浏览、购物、兑换或浇灌。
+
+```bash
+npx skills@latest add groveLqh/grove-better-skills hema-collect-flowers
+```
+
 ### 大众点评评价
 
 路径：[`skills/dianping-review`](skills/dianping-review)
