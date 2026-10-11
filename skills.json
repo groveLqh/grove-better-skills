@@ -71,6 +71,19 @@
         "chinese"
       ],
       "installable": true
+    },
+    {
+      "name": "hema-collect-flowers",
+      "description": "使用 iphone-use 完成盒马小镇每日签到、每日答题，并收取对应盒花奖励；默认只做这两项任务。",
+      "path": "skills/hema-collect-flowers",
+      "entry": "skills/hema-collect-flowers/SKILL.md",
+      "version": "0.1.0",
+      "tags": [
+        "hema",
+        "iphone-use",
+        "daily-check-in"
+      ],
+      "installable": true
     }
   ]
 }
