@@ -57,6 +57,20 @@
         "codex"
       ],
       "installable": true
+    },
+    {
+      "name": "dianping-review",
+      "description": "为大众点评撰写或润色餐厅评价。先查看具体门店的推荐菜与特色，再结合用户真实体验生成自然、具体、整体偏正面的评价；每篇必写口味，并按需选择环境、服务、性价比、排队等方面。用户要求写大众点评、餐厅评价或探店用餐评价时使用。",
+      "path": "skills/dianping-review",
+      "entry": "skills/dianping-review/SKILL.md",
+      "version": "0.1.0",
+      "tags": [
+        "dianping",
+        "restaurant-review",
+        "writing",
+        "chinese"
+      ],
+      "installable": true
     }
   ]
 }

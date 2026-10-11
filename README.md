@@ -13,6 +13,7 @@
 .
 ├── skills/                         # 自研、可安装的 Skills
 │   ├── clone-website/
+│   ├── dianping-review/
 │   ├── debugging-webpage-anomalies/
 │   ├── risk-oriented-code-review/
 │   └── skill-recommender/
@@ -111,6 +112,16 @@ curl -fsSL <raw-install-url> | SKILLS_REPO_URL=<git-repo-url> bash -s -- skill-r
 ```
 
 ## 自研 Skills
+
+### 大众点评评价
+
+路径：[`skills/dianping-review`](skills/dianping-review)
+
+先查看具体门店的推荐菜，结合真实用餐体验选择 1–3 道菜展开细节，生成自然、口语化、少套话的大众点评文案。适量使用语气助词，区分推荐信息与亲身体验；仅生成文案，不自动发布。
+
+```bash
+npx skills@latest add groveLqh/grove-better-skills dianping-review
+```
 
 ### 1. Clone Website
 
