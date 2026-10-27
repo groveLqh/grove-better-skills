@@ -12,6 +12,7 @@
 ```text
 .
 ├── skills/                         # 自研、可安装的 Skills
+│   ├── agent-engineer-resume-review/
 │   ├── clone-website/
 │   ├── dianping-review/
 │   ├── debugging-webpage-anomalies/
@@ -112,6 +113,26 @@ curl -fsSL <raw-install-url> | SKILLS_REPO_URL=<git-repo-url> bash -s -- skill-r
 ```
 
 ## 自研 Skills
+
+### Agent 开发工程师：面试官学习与简历评估
+
+路径：[`skills/agent-engineer-resume-review`](skills/agent-engineer-resume-review)
+
+结合候选人简历，为面试官准备两个主体：先输出可独立阅读的技术学习讲义，讲清前置知识、核心机制、贯穿例子、易混概念、工程取舍和学习顺序；再围绕简历技术与项目生成 L1 基础、L2 实现排障、L3 设计取舍的问题链。每道主问题包含原文依据、重点考核方向、参考要点、递进追问和需核验的证据。
+
+默认岗位为 Agent 开发工程师，支持按具体 JD、级别或面试时长调整。区分简历声称、技术解释与待验证能力，不把技术关键词直接当作已掌握的证据。适合面试官先学习候选人的技术栈，再准备有依据的面试；不用于自动作出录用决定。
+
+```bash
+npx skills@latest add groveLqh/grove-better-skills agent-engineer-resume-review
+```
+
+推荐输入：
+
+```text
+请用 agent-engineer-resume-review 分析这份简历，岗位是 Agent 开发工程师。
+技术知识部分主要给我这个面试官学习，请讲清原理、例子、相邻概念区别和工程取舍；
+再按简历里的技术与项目生成由浅入深的问题、参考回答要点和重点考核方向。
+```
 
 ### 盒马领取盒花
 

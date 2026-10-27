@@ -84,6 +84,21 @@
         "daily-check-in"
       ],
       "installable": true
+    },
+    {
+      "name": "agent-engineer-resume-review",
+      "description": "面向 Agent 开发工程师面试官的技术学习与面试准备：结合简历系统讲解概念、原理、例子、易混概念和工程取舍，再生成递进技术题、项目题、参考要点与考核方向。",
+      "path": "skills/agent-engineer-resume-review",
+      "entry": "skills/agent-engineer-resume-review/SKILL.md",
+      "version": "0.1.0",
+      "tags": [
+        "agent-engineering",
+        "interviewer-learning",
+        "resume-review",
+        "technical-interview",
+        "chinese"
+      ],
+      "installable": true
     }
   ]
 }
